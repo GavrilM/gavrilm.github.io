@@ -22,6 +22,7 @@ h4,
 h5,
 h6 {
   font-family: "Reem Kufi";
+  text-align: center;
 }
 h1 {
   font-size: 5rem;
@@ -115,8 +116,9 @@ nav ul .active:after {
 section {
   border: 1px solid #f9f9f9;
   min-height: 100vh;
-  width: 98vw;
+  width: 100vw;
   background: #f9f9f9;
+  box-sizing: border-box;
 }
 section .container {
   margin-top: 60px;
@@ -226,12 +228,18 @@ section .container {
 #contact {
   position: relative;
 }
+#contact h2{
+  top: 20%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
 #contact h4 {
   width: 100%;
   text-align: center;
   position: absolute;
-  top: 30%;
-  line-height: 1.5rem;
+  top: 50%;
+  line-height: 2.5rem;
 }
 #contact h4 a {
   color: #EB4F43;
@@ -248,7 +256,7 @@ section .container {
   position: absolute;
   justify-content: center;
   flex-wrap: wrap;
-  top: 50%;
+  top: 70%;
 }
 #contact .row-center-around a {
   margin: 0 15px;
@@ -283,13 +291,25 @@ section .container {
 }
 .card .info {
   height: 100%;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: center;*/
+}
+.card .info *{
+  position: relative;
+}
+.card .info h2 {
+  top: 5%;
+}
+.card .info h5 {
+  width: 100%;
 }
 .card .info img {
   max-height: 50px;
+}
+.card .img{
+  height: 100%;
 }
 .card img {
   max-height: 100%;
@@ -297,6 +317,7 @@ section .container {
 }
 .card .lnr {
   position: absolute;
+  top: 0;
   right: 0;
   font-size: 3rem;
 }
@@ -359,6 +380,9 @@ section .container {
 }
 #about h4.animated {
   animation-delay: 400ms;
+}
+#contact h4.animated {
+  animation-delay: 200ms;
 }
 .row-center-around.animated {
   animation-delay: 500ms;

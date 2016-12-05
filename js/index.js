@@ -11,13 +11,14 @@ $(function() {
       }
     }
   });
-    
+
     $(".card").on("click", function(event){
       $(".card").removeClass("expanded");
       const card = $(event.target).closest(".card");
       card.find(".preview").addClass("hidden");
       card.find(".lnr").removeClass("hidden");
       card.find(".icon").addClass("hidden")
+      card.find(".img").addClass("hidden")
       $(".info").removeClass("hidden")
       $(".bg-cover").removeClass("hidden")
       card.addClass("expanded");
@@ -30,6 +31,7 @@ $(function() {
       card.removeClass("expanded");
       card.find(".preview").removeClass("hidden");
       card.find(".icon").removeClass("hidden");
+      card.find(".img").removeClass("hidden");
       card.find(".lnr").addClass("hidden");
     })
 
@@ -42,11 +44,11 @@ $(function() {
 
 $(document).ready(function () {
     $("#home .title > *").removeAttr("class");
-    
+
     $(document).on("scroll", function (event){
         let scrollPos = $(document).scrollTop();
         let refElement;
-        
+
         scrollPos += $(window).height()*.4;
         $('li>a').each(function () {
             var currLink = $(this);
@@ -67,10 +69,9 @@ $(document).ready(function () {
         scrollPos -= $(window).height()*.3;
         refElement = $("#contact");
         if (refElement.position().top <= scrollPos) {
-            console.log("ran");
            $("#contact .animated").addClass("slide-up");
         }
-      
-       
+
+
     });
 });

@@ -15,13 +15,18 @@ $(function() {
     $(".card").on("click", function(event){
       $(".card").removeClass("expanded");
       const card = $(event.target).closest(".card");
+      const pos = card.offset();
+      pos.top -= $(window).scrollTop();
+      card.css(pos);
       card.find(".preview").addClass("hidden");
       card.find(".lnr").removeClass("hidden");
       card.find(".icon").addClass("hidden")
       card.find(".img").addClass("hidden")
-      $(".info").removeClass("hidden")
-      $(".bg-cover").removeClass("hidden")
-      card.addClass("expanded");
+      $(".bg-cover").removeClass("hidden");
+      setTimeout(function (){
+        card.addClass("expanded");
+        setTimeout(function (){card.find(".info").removeClass("hidden")}, 250);
+      }, 50);
     })
 
     $(".bg-cover").on("click", function(event){

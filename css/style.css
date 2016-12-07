@@ -16,8 +16,8 @@ hr {
   border: none;
 }
 p{
-  font-size: 1.5rem;
-  line-height: 1.4em;
+  font-size: 1rem;
+  line-height: 1.2em;
 }
 h1,
 h2,
@@ -105,6 +105,10 @@ h5 {
   }
   .card .info{
     
+  }
+  .card .info p{
+    font-size: .75rem;
+    line-height: 1rem;
   }
 }
 /*--------------------------*/
@@ -214,6 +218,7 @@ section .container {
   transition: all 800ms ease;
 }
 #about p {
+  font-size: 1.5rem;
   max-width: 600px;
   margin-top: 7vh;
   margin-bottom: 7vh;
@@ -233,7 +238,7 @@ section .container {
   margin-top: 7vh;
   margin-bottom: 7vh;
 }
-#about .tech .tech-logo {
+.tech-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,12 +248,12 @@ section .container {
 #about .tech .tech-logo img {
   max-height: 100px;
 }
-#about .tech .tech-logo .caption {
+.tech-logo .caption {
   margin-top: 15px;
   opacity: 0;
   transition: opacity 300ms ease;
 }
-#about .tech .tech-logo:hover .caption {
+.tech-logo:hover .caption {
   opacity: 1;
 }
 #portfolio {
@@ -301,6 +306,7 @@ section .container {
 #contact .row-center-around a {
   margin: 0 15px;
 }
+
 /*---------cards----------*/
 .bg-cover {
   width: 100vw;
@@ -342,6 +348,30 @@ section .container {
 .card .info *{
   text-align: center;
 }
+.card .info h4{
+  margin: 10px 0;
+}
+.card .info .description{
+  text-align: left;
+}
+.card .info .action-list{
+  margin-left: 15px;
+}
+.card .info .action-list li{
+  text-align: left;
+  line-height: 1.3rem;
+  list-style-type: circle;
+}
+.card .info .tech-used{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  flex-direction:column;
+  flex-wrap: wrap;
+}
+.card .info .tech-used .tech-logo img{
+  max-width: 100px;
+}
 .card .info img {
   max-height: 50px;
 }
@@ -377,6 +407,14 @@ section .container {
   box-shadow: none !important;
   background-color: white;
   box-sizing: border-box;
+}
+@media screen and (max-width: 650px){
+  #about p {
+    font-size: 1rem;
+  }
+  .card .info .tech-used{
+    flex-direction:row;
+  }
 }
 /*-----------------Animation------------------*/
 #home .title > h1 {

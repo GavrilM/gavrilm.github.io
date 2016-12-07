@@ -247,6 +247,7 @@ section .container {
 }
 #about .tech .tech-logo img {
   max-height: 100px;
+  max-width: 100px;
 }
 .tech-logo .caption {
   margin-top: 10px;

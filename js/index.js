@@ -13,6 +13,7 @@ $(function() {
   });
 
     $(".card").on("click", function(event){
+      if($(".expanded").length > 0) return;
       $(".card").removeClass("expanded");
       const card = $(event.target).closest(".card");
       const pos = card.offset();

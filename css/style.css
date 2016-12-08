@@ -1,3 +1,4 @@
+/*http://paletton.com/#uid=33l0u0keJJB4FYl9US5iZ-cmPtt*/
 body {
   font-family: "Lato", Helvetica, sans-serif;
   color: black;
@@ -7,7 +8,7 @@ a {
   text-decoration: none;
 }
 i {
-  color: #EB4F43;
+  color: #EB4F43 !important;
 }
 hr {
   width: 100%;

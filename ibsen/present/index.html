@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Presentation - Slides</title>
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+
+   
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div id ="intro" data-number="0" class="step slide centered" data-x="-1000" data-y="-1500">
+      <h1>Henrik Ibsen</h1>
+      <h4> Swedish Playwright / Artist / Poet</h4>
+    </div>
+
+
+    <div data-number="1" class="step slide centered" data-x="0" data-y="-1500">
+        <h2>Birth</h2>
+        <ul>
+          <li> Born to Knud Ibsen and Marichen Altenburg</li>
+          <li>Skien, Norway</li>
+        </ul>
+    </div>
+  
+  <div data-number="2" class="step centered" data-x="0" data-y="-1400" data-scale=".05">
+    <img src="http://www.ezilon.com/maps/images/europe/Norway-road-map.gif" alt="" />
+  </div>
+
+    <div data-number="3" class="step slide" data-x="1000" data-y="-1500">
+        <h2>Childhood</h2>
+        <ul>
+          <li>Father's business fell into financial ruin</li>
+          <li>Moved to rundown farm outside of the city</li>
+          <li>Young Ibsen spent his free time reading, painting, and doing magic tircks</li>
+        </ul>
+    </div>
+  
+    <div data-number="4" class="step slide centered" data-x="1000" data-y="-1400" data-scale=".05">
+      <img src="http://static.panoramio.com/photos/large/61519252.jpg" alt="" />
+  </div>  
+        
+  
+    <div data-number="5" id="title" class="step" data-x="0" data-y="-1500" data-scale="4">
+      <h1>Attitudes</h1>
+       <span class="try">of 19th century Norway</span>
+    </div>
+
+    <div data-number="6" id="tradition" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>Very <strong>traditional,<br> conservative</strong> society</p>
+        <img src="http://farm6.staticflickr.com/5228/5650442853_840eea344b_c.jpg" alt="" />
+    </div>
+  
+  <div data-number="7" class="step " data-x="450" data-y="2700" data-rotate="90" data-scale=".5">
+    <img src="http://i0.wp.com/www.teamjimmyjoe.com/wp-content/uploads/2014/11/scary-creepy-real-photos-dancing-dead-bodies-vintage.jpg" alt="" />
+  </div>  
+  <div data-number="8" class="step " data-x="450" data-y="2700" data-z="-1000" data-rotate="90" data-scale=".5">
+    <img src="http://19thcenturyladies.weebly.com/uploads/2/5/2/3/25233050/7444200_orig.jpg" alt="" />
+  </div>  
+
+    <div data-number="9" class="step slide" data-x="3500" data-y="2100" data-z="2500" data-rotate="180" data-scale="6">
+        <h1>Grimstad</h1>
+        <ul>
+          <li>prosperous port city</li>
+          <li>wrote his first play, Catalina</li>
+      </ul>
+    </div>
+  <div data-number="10" class="step " data-x="3500" data-y="2100" data-z="-500" data-rotate="270" data-scale=".5">
+    <!--imgs--><img src="https://hannemanarchive.files.wordpress.com/2014/12/image22.jpg" alt="" />
+  </div> 
+        
+    <div data-number="11" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <h1>Kristinaia</h1>
+    </div>
+  
+  <div data-number="12" class="step" data-x="2400" data-y="-2000" data-z="-5000" data-scale=".5">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Oslo_Universitet_2.jpg" alt="" />
+  </div> 
+  <div data-number="13" class="step" data-x="3000" data-y="-2000" data-z="-5000" data-scale=".5">
+    <img src="http://e.peruthisweek.e3.pe//ima/0/0/0/1/8/18199/624x468.jpg" alt="" />
+  </div> 
+  <div data-number="14" class="step" data-x="3600" data-y="-2000" data-z="-5000" data-scale=".5">
+    <img src="https://i.ytimg.com/vi/Wt99_n6NfTM/maxresdefault.jpg" alt="" />
+  </div> 
+  <div data-number="15" class="step centered" data-x="4200" data-y="-2000" data-z="-5000" data-scale=".5">
+    <img src="http://ibsen.nb.no/image/417/1/417_1.jpeg" alt="" />
+    <p>satire on marriage</p>
+  </div> 
+
+    <div data-number="16" id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p><b class="imagination">Moves to Sorrento, Italy in 1862</b></p>
+    </div>
+  
+  <div data-number="17" class="step centered" data-x="7000" data-y="-300" data-z="-1000" data-scale=".15" data-rotate="60">
+    <img src="https://www.cappelendamm.no/sek-asset/external-resources/highres/product/9788202400743.jpg" alt="" />
+  </div> 
+  
+  <div data-number="18" class="step centered" data-x="7000" data-y="-300" data-z="-700" data-scale=".5">
+    <img src="http://images.gr-assets.com/books/1389996366l/279221.jpg" alt="" />
+  </div> 
+
+    <div data-number="19" id="source" class="step" data-x="8000" data-y="4000" data-rotate="20" data-scale="4">
+        <p>Moves to Germany in 1868</p>
+    </div>
+  
+  <div data-number="20" class="step" data-x="8000" data-y="4000" data-z="-700" data-scale=".5">
+    <ul>
+      <li>stayed for 23 years in self-imposed exile</li>
+      <li>wrote his most famous works</li>
+    </ul>
+  </div> 
+
+    <div data-number="21" id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>Finally returns to Norway...</p>
+    </div>
+  
+  <div data-number="22" class="step centered" data-x="5700" data-y="4200" data-scale=".5">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Ibsen-Dresden01.jpg" alt="" />
+    <ul>
+      <li>died on May 23, 1906</li>
+    </ul>
+  </div>
+
+    <!--
+        
+        And the last one shows full power and flexibility of impress.js.
+        
+        You can not only position element in 3D, but also rotate it around any axis.
+        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
+        10 degrees (clockwise) around Y axis.
+        
+        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
+        as `data-rotate` (these two are basically aliases).
+        
+    -->
+    <div data-number="23" id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-90" data-rotate-y="90" data-scale="2">
+        <h1>Ibsen's Major Works</h1>
+    </div>
+  
+  <div data-number="24" class="step " data-x="6200" data-y="-1300" data-z="-3100" data-rotate-x="-90" data-rotate-y="180" data-scale="2">
+        <img src="http://blogs.luc.edu/artsalive/files/2015/04/dollshouse.jpg" alt="" />
+    </div>
+  
+  <div data-number="25" class="step" data-x="4200" data-y="-1300" data-z="-3100" data-rotate-x="-90" data-rotate-y="180" data-scale="2">
+        <img src="http://theviewspaper.net/wp-content/uploadsnew/Ghosts-by-Henrik-Ibsen.jpg" alt="" />
+    </div>
+  
+  <div data-number="26" class="step" data-x="2200" data-y="-1300" data-z="-3100" data-rotate-x="-90" data-rotate-y="180" data-scale="2">
+        <img src="http://ibsen.nb.no/image/116820/1/116820_1.jpg" alt="" />
+    </div>
+  
+  <div data-number="27" class="step " data-x="200" data-y="-1300" data-z="-3100" data-rotate-x="-90" data-rotate-y="180" data-scale="2">
+        <img src="http://www.hedda-movie.com/uploads/6/9/6/9/6969247/3887909-orig_orig.jpg" alt="" />
+    </div>
+  
+  <div data-number="28" class="step" data-x="2200" data-y="-1300" data-z="-9000" data-rotate-x="180" data-rotate-y="180" data-scale="1">
+        <h1>Ibsen's Legacy</h1>
+    </div>
+  
+  <div data-number="29" class="step slide" data-x="1200" data-y="-1300" data-z="-9000" data-rotate-x="180" data-rotate-y="180" data-scale="1">
+        <h2>Characters</h2>
+        <ul>
+          <li>people who are consumed by by their pursuit of "something else" in life</li>
+          <li>realistic psychological conflict</li>
+          <li>insignificance of life</li>
+        </ul>
+    </div>
+  
+  <div data-number="30" class="step slide" data-x="200" data-y="-1300" data-z="-7000" data-rotate-x="180" data-rotate-y="180" data-scale="1">
+        <h2>Plot Lines</h2>
+        <ul>
+          <li>dramatized the hidden conflicts in society</li>
+          <li>addressed the conflict of old values versus the new</li>
+          <li>personal identity vs. societal expectations</li>
+        </ul>
+    </div>
+  
+  <div data-number="31" class="step slide" data-x="200" data-y="-1300" data-z="-5000" data-rotate-x="180" data-rotate-y="180" data-scale="1">
+        <h2>Contributions</h2>
+        <ul>
+          <li>psychological depth</li>
+          <li>realism</li>
+          <li>social commentary</li>
+        </ul>
+    </div>
+  
+  <div data-number="32" class="step slide" data-x="0" data-y="0" data-z="9000" data-scale="7">
+        <h1>Quiz</h1>
+    </div>
+
+    <!--
+        
+        So to summarize of all the possible attributes used to position presentation steps, we have:
+        
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+        
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+        
+    -->
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+  <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  
+</script>
+  
+<script src="//netdna.impressjscdn.com/impressjs/0.5.3/js/impress.js"></script>
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( stepIndex | stepElementId | stepElement, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

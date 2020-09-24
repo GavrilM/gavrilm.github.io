@@ -21,9 +21,14 @@ ul {
 }
 
 nav {
+  position: fixed;
+  width: 100%;
   height: 50px;
   border-bottom: 1px solid black;
   display: flex;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
 #backarrow {
@@ -47,7 +52,7 @@ nav {
 }
 
 #backarrow:hover .lnr-arrow-left {
-  color:  white
+  color: white;
 }
 
 #navtitle {
@@ -59,12 +64,11 @@ nav {
 
 .content {
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  pointer-events: none;
   opacity: 1;
   transition: opacity 300ms ease;
 }
@@ -88,7 +92,8 @@ article {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 80vh;
+  height: 100vh;
+  background-color: white;
 }
 
 .highlight {
